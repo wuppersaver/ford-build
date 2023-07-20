@@ -1,16 +1,13 @@
 ---
 
 name: FORD Documentation
-author: Jim Madge
+author: Jim Madge - modified by Felix Mildner
 description: Build documentation for a Fortran project using FORD
 inputs:
   project_file:
     description: Name of the FORD project file
     required: true
     default: project-file.md
-outputs:
-  output_dir:
-    description: Path to the directory where documentation is written
 runs:
   using: docker
   image: Dockerfile
