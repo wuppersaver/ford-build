@@ -2,7 +2,13 @@
 set -e
 
 # Find FORD project file, name is given by $1
-ROOT=$(find . -name $1 -exec dirname {} \;)
+ROOT="/github/workspace/${1}"
 echo "FORD project file located in ${ROOT}"
 
-pwd
+echo "Changing into main folder"
+cd $ROOT
+
+# Build documentation
+echo "Building documentation"
+make ford
+
